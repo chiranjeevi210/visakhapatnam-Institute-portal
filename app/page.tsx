@@ -27,15 +27,29 @@ export default function CollegeHomePage() {
       title: "B.Tech in Computer Science & AI",
       category: "Engineering",
       duration: "4 Years",
-      seats: "180 Seats",
-      desc: "Specialize in artificial intelligence, machine learning, cloud architecture, and full-stack software engineering.",
+      seats: "120 Seats",
+      desc: "Specialization in artificial intelligence, machine learning, cloud architecture, and full-stack software engineering.",
     },
     {
       title: "B.Tech in Electronics & Communication",
       category: "Engineering",
       duration: "4 Years",
-      seats: "120 Seats",
+      seats: "60 Seats",
       desc: "Focus on VLSI design, embedded IoT systems, robotics, and next-generation wireless networks.",
+    },
+     {
+      title: "B.Tech in Electrical and Electronics Engineering",
+      category: "Engineering",
+      duration: "4 Years",
+      seats: "60 Seats",
+      desc: "Specialization in Power Electronics and Power systems.",
+    },
+     {
+      title: "B.Tech in Information Technology",
+      category: "Engineering",
+      duration: "4 Years",
+      seats: "60 Seats",
+      desc: "General Information Technology",
     },
     {
       title: "Master of Business Administration (MBA)",
@@ -50,6 +64,13 @@ export default function CollegeHomePage() {
       duration: "3 Years",
       seats: "90 Seats",
       desc: "Hands-on training in statistical modeling, big data pipelines, Python, and predictive analytics.",
+    },
+     {
+      title: "B.Tech in Mechanical Engineering",
+      category: "Engineering",
+      duration: "4 Years",
+      seats: "60 Seats",
+      desc: "General Basic Specialization",
     },
   ];
 
@@ -73,6 +94,11 @@ export default function CollegeHomePage() {
       date: "Dec 04, 2026",
       tag: "Event",
       title: "National Hackathon 'InnovateX 2026' — Register Your Team Before Nov 30",
+    },
+    {
+      date: "Dec 10, 2026",
+      tag: "Event",
+      title: "National Seminar:  Register Your Team Before Dec 05",
     },
   ];
 
@@ -107,7 +133,7 @@ export default function CollegeHomePage() {
             </div>
             <div>
               <span className="font-bold text-lg tracking-tight text-slate-900 block leading-none">
-                APEX INSTITUTE
+                Visakhapatnam Institute for Professional studies
               </span>
               <span className="text-[11px] text-slate-500 font-medium tracking-wider uppercase">
                 Of Technology &amp; Management
@@ -238,8 +264,10 @@ export default function CollegeHomePage() {
                   </label>
                   <input
                     type="email"
+                    type="Mobile Number"
                     required
                     placeholder="student@email.com"
+                    placeholder="student Mobile Number"
                     className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-600"
                   />
                 </div>
@@ -252,6 +280,9 @@ export default function CollegeHomePage() {
                     <option>B.Tech Electronics</option>
                     <option>MBA Management</option>
                     <option>B.Sc. Data Science</option>
+                    <option>B.Tech Electrical and Electronics </option>
+                    <option>B.Tech Information Technology</option>
+                    <option>B.Tech Mechanical Engineering</option>
                   </select>
                 </div>
               </div>
@@ -381,7 +412,7 @@ export default function CollegeHomePage() {
           <div>
             <div className="flex items-center gap-2 text-white font-bold text-lg mb-3">
               <GraduationCap className="w-6 h-6 text-amber-400" />
-              APEX INSTITUTE
+              Visakhapatnam Institute for Professional Studies
             </div>
             <p className="text-sm leading-relaxed">
               Empowering students through innovation, practical engineering, and global industry partnerships.
@@ -413,12 +444,12 @@ export default function CollegeHomePage() {
             </h4>
             <p className="text-sm flex items-start gap-2">
               <MapPin className="w-4 h-4 text-amber-400 shrink-0 mt-1" />
-              <span>Knowledge Park, Rushikonda, Visakhapatnam, Andhra Pradesh 530045</span>
+              <span>BRTS Road, Simhachalam -Hanumathavaka Road, Mudasarlova, Visakhapatnam, Andhra Pradesh 530035</span>
             </p>
           </div>
         </div>
         <div className="max-w-7xl mx-auto border-t border-slate-800 mt-10 pt-6 text-xs text-center">
-          © 2026 Apex Institute of Technology &amp; Management. Built for Full-Stack Portfolio.
+          © 2026 Visakhapatnam Institute for Professional studies. Built for Full-Stack Portfolio.
         </div>
       </footer>
     </div>
