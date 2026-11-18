@@ -5,24 +5,23 @@ import Link from "next/link";
 import {
   GraduationCap,
   BookOpen,
-  Users,
   Award,
   Calendar,
   ArrowRight,
   Menu,
   X,
-  Search,
   Bell,
   MapPin,
   Phone,
   Mail,
 } from "lucide-react";
 
+
 export default function CollegeHomePage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const programs = [
+   const programs = [
     {
       title: "B.Tech in Computer Science & AI",
       category: "Engineering",
@@ -37,19 +36,19 @@ export default function CollegeHomePage() {
       seats: "60 Seats",
       desc: "Focus on VLSI design, embedded IoT systems, robotics, and next-generation wireless networks.",
     },
-     {
+    {
       title: "B.Tech in Electrical and Electronics Engineering",
       category: "Engineering",
       duration: "4 Years",
       seats: "60 Seats",
-      desc: "Specialization in Power Electronics and Power systems.",
+      desc: "Specialization in power electronics, smart grids, and electrical power systems.",
     },
-     {
+    {
       title: "B.Tech in Information Technology",
       category: "Engineering",
       duration: "4 Years",
       seats: "60 Seats",
-      desc: "General Information Technology",
+      desc: "Core training in software development, database systems, networking, and enterprise IT infrastructure.",
     },
     {
       title: "Master of Business Administration (MBA)",
@@ -65,12 +64,12 @@ export default function CollegeHomePage() {
       seats: "90 Seats",
       desc: "Hands-on training in statistical modeling, big data pipelines, Python, and predictive analytics.",
     },
-     {
+    {
       title: "B.Tech in Mechanical Engineering",
       category: "Engineering",
       duration: "4 Years",
       seats: "60 Seats",
-      desc: "General Basic Specialization",
+      desc: "Comprehensive curriculum in thermodynamics, CAD/CAM manufacturing, robotics, and industrial design.",
     },
   ];
 
@@ -79,7 +78,7 @@ export default function CollegeHomePage() {
       ? programs
       : programs.filter((p) => p.category === selectedCategory);
 
-  const notices = [
+   const notices = [
     {
       date: "Nov 20, 2026",
       tag: "Admissions",
@@ -98,13 +97,13 @@ export default function CollegeHomePage() {
     {
       date: "Dec 10, 2026",
       tag: "Event",
-      title: "National Seminar:  Register Your Team Before Dec 05",
+      title: "National Seminar: Register Your Team Before Dec 05",
     },
   ];
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans">
-      {/* Top Announcement Bar */}
+          {/* Top Announcement Bar */}
       <div className="bg-indigo-950 text-indigo-100 text-xs py-2 px-4">
         <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
           <div className="flex items-center gap-2">
@@ -118,7 +117,7 @@ export default function CollegeHomePage() {
               <Phone className="w-3.5 h-3.5" /> +91 891-234-5678
             </span>
             <span className="flex items-center gap-1">
-              <Mail className="w-3.5 h-3.5" /> admissions@apexinstitute.edu.in
+              <Mail className="w-3.5 h-3.5" /> admissions@vips.edu.in
             </span>
           </div>
         </div>
@@ -133,7 +132,7 @@ export default function CollegeHomePage() {
             </div>
             <div>
               <span className="font-bold text-lg tracking-tight text-slate-900 block leading-none">
-                Visakhapatnam Institute for Professional studies
+                Visakhapatnam Institute for Professional Studies
               </span>
               <span className="text-[11px] text-slate-500 font-medium tracking-wider uppercase">
                 Of Technology &amp; Management
@@ -143,21 +142,13 @@ export default function CollegeHomePage() {
 
           {/* Desktop Links */}
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-700">
-            <a href="#about" className="hover:text-indigo-700 transition">
-              About
-            </a>
-            <a href="#programs" className="hover:text-indigo-700 transition">
-              Programs
-            </a>
-            <a href="#notices" className="hover:text-indigo-700 transition">
-              Notice Board
-            </a>
-            <a href="#campus" className="hover:text-indigo-700 transition">
-              Campus Life
-            </a>
+            <a href="#about" className="hover:text-indigo-700 transition">About</a>
+            <a href="#programs" className="hover:text-indigo-700 transition">Programs</a>
+            <a href="#notices" className="hover:text-indigo-700 transition">Notice Board</a>
+            <a href="#campus" className="hover:text-indigo-700 transition">Campus Life</a>
           </nav>
 
-                    {/* Action Buttons */}
+          {/* Action Buttons */}
           <div className="hidden md:flex items-center gap-3">
             <Link
               href="/portal"
@@ -173,10 +164,10 @@ export default function CollegeHomePage() {
             </a>
           </div>
 
-
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle navigation menu"
             className="md:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -185,7 +176,22 @@ export default function CollegeHomePage() {
 
         {/* Mobile Dropdown */}
         {mobileMenuOpen && (
-            <div className="pt-2 flex flex-col gap-2">
+          <div className="md:hidden bg-white border-t border-slate-200 px-4 pt-3 pb-5 space-y-3">
+            <nav className="flex flex-col space-y-2 text-sm font-medium text-slate-700">
+              <a href="#about" onClick={() => setMobileMenuOpen(false)} className="py-1.5 hover:text-indigo-700">
+                About
+              </a>
+              <a href="#programs" onClick={() => setMobileMenuOpen(false)} className="py-1.5 hover:text-indigo-700">
+                Programs
+              </a>
+              <a href="#notices" onClick={() => setMobileMenuOpen(false)} className="py-1.5 hover:text-indigo-700">
+                Notice Board
+              </a>
+              <a href="#campus" onClick={() => setMobileMenuOpen(false)} className="py-1.5 hover:text-indigo-700">
+                Campus Life
+              </a>
+            </nav>
+            <div className="pt-2 flex flex-col gap-2 border-t border-slate-100">
               <Link
                 href="/portal"
                 className="w-full py-2 text-center text-sm font-semibold text-indigo-700 border border-indigo-200 rounded-lg"
@@ -194,11 +200,13 @@ export default function CollegeHomePage() {
               </Link>
               <a
                 href="#apply"
+                onClick={() => setMobileMenuOpen(false)}
                 className="w-full py-2 text-center text-sm font-semibold bg-indigo-700 text-white rounded-lg"
               >
                 Apply Now
               </a>
             </div>
+          </div>
         )}
       </header>
 
@@ -239,7 +247,7 @@ export default function CollegeHomePage() {
             <p className="text-sm text-slate-500 mt-1">
               Request our digital prospectus and scholarship eligibility details.
             </p>
-            <form
+                     <form
               onSubmit={(e) => {
                 e.preventDefault();
                 alert("Inquiry submitted! Our admissions counselor will contact you shortly.");
@@ -257,6 +265,7 @@ export default function CollegeHomePage() {
                   className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-600"
                 />
               </div>
+
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-xs font-semibold uppercase text-slate-600 mb-1">
@@ -264,28 +273,39 @@ export default function CollegeHomePage() {
                   </label>
                   <input
                     type="email"
-                    type="Mobile Number"
                     required
                     placeholder="student@email.com"
-                    placeholder="student Mobile Number"
                     className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-600"
                   />
                 </div>
                 <div>
                   <label className="block text-xs font-semibold uppercase text-slate-600 mb-1">
-                    Program Interest
+                    Mobile Number
                   </label>
-                  <select className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-indigo-600">
-                    <option>B.Tech Computer Science</option>
-                    <option>B.Tech Electronics</option>
-                    <option>MBA Management</option>
-                    <option>B.Sc. Data Science</option>
-                    <option>B.Tech Electrical and Electronics </option>
-                    <option>B.Tech Information Technology</option>
-                    <option>B.Tech Mechanical Engineering</option>
-                  </select>
+                  <input
+                    type="tel"
+                    required
+                    placeholder="+91 98765 43210"
+                    className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-600"
+                  />
                 </div>
               </div>
+
+              <div>
+                <label className="block text-xs font-semibold uppercase text-slate-600 mb-1">
+                  Program Interest
+                </label>
+                <select className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-indigo-600">
+                  <option>B.Tech Computer Science &amp; AI</option>
+                  <option>B.Tech Electronics &amp; Communication</option>
+                  <option>B.Tech Electrical and Electronics Engineering</option>
+                  <option>B.Tech Information Technology</option>
+                  <option>B.Tech Mechanical Engineering</option>
+                  <option>MBA Management</option>
+                  <option>B.Sc. (Hons) Data Science</option>
+                </select>
+              </div>
+
               <button
                 type="submit"
                 className="w-full bg-indigo-700 hover:bg-indigo-800 text-white font-semibold py-3 rounded-lg shadow transition"
@@ -293,28 +313,28 @@ export default function CollegeHomePage() {
                 Request Prospectus
               </button>
             </form>
+
           </div>
         </div>
       </section>
 
       {/* Key Statistics Banner */}
       <section id="about" className="max-w-7xl mx-auto px-4 -mt-10 relative z-10">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 bg-white rounded-2xl shadow-lg border border-slate-200 p-6 sm:p-8">
-          <div className="text-center border-r border-slate-100 last:border-none">
-            <p className="text-3xl sm:text-4xl font-extrabold text-indigo-700">96.4%</p>
-            <p className="text-xs sm:text-sm font-medium text-slate-500 mt-1">Placement Record</p>
-          </div>
-          <div className="text-center lg:border-r border-slate-100">
-            <p className="text-3xl sm:text-4xl font-extrabold text-indigo-700">42 LPA</p>
-            <p className="text-xs sm:text-sm font-medium text-slate-500 mt-1">Highest Package</p>
-          </div>
-          <div className="text-center border-r border-slate-100">
-            <p className="text-3xl sm:text-4xl font-extrabold text-indigo-700">120+</p>
-            <p className="text-xs sm:text-sm font-medium text-slate-500 mt-1">Research Labs</p>
-          </div>
-          <div className="text-center">
-            <p className="text-3xl sm:text-4xl font-extrabold text-indigo-700">8,500+</p>
-            <p className="text-xs sm:text-sm font-medium text-slate-500 mt-1">Active Students</p>
+                {/* Balanced 4-column layout for 4 notices */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {notices.map((notice, idx) => (
+              <div key={idx} className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                <div className="flex items-center justify-between text-xs mb-3">
+                  <span className="font-bold text-amber-700 bg-amber-50 px-2.5 py-1 rounded">
+                    {notice.tag}
+                  </span>
+                  <span className="text-slate-400 flex items-center gap-1">
+                    <Calendar className="w-3.5 h-3.5" /> {notice.date}
+                  </span>
+                </div>
+                <h3 className="font-bold text-slate-900 leading-snug">{notice.title}</h3>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -438,18 +458,20 @@ export default function CollegeHomePage() {
               <li><a href="#" className="hover:text-white">Digital Library</a></li>
             </ul>
           </div>
-          <div>
+                    <div>
             <h4 className="text-white font-semibold mb-3 text-sm uppercase tracking-wider">
               Campus Address
             </h4>
             <p className="text-sm flex items-start gap-2">
               <MapPin className="w-4 h-4 text-amber-400 shrink-0 mt-1" />
-              <span>BRTS Road, Simhachalam -Hanumathavaka Road, Mudasarlova, Visakhapatnam, Andhra Pradesh 530035</span>
+              <span>
+                BRTS Road, Simhachalam - Hanumanthavaka Road, Mudasarlova, Visakhapatnam, Andhra Pradesh 530035
+              </span>
             </p>
           </div>
         </div>
         <div className="max-w-7xl mx-auto border-t border-slate-800 mt-10 pt-6 text-xs text-center">
-          © 2026 Visakhapatnam Institute for Professional studies. Built for Full-Stack Portfolio.
+          © 2026 Visakhapatnam Institute for Professional Studies. All rights reserved.
         </div>
       </footer>
     </div>
