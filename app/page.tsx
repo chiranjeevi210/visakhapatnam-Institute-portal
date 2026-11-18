@@ -319,22 +319,24 @@ export default function CollegeHomePage() {
       </section>
 
       {/* Key Statistics Banner */}
+            {/* Key Statistics Banner */}
       <section id="about" className="max-w-7xl mx-auto px-4 -mt-10 relative z-10">
-                {/* Balanced 4-column layout for 4 notices */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {notices.map((notice, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
-                <div className="flex items-center justify-between text-xs mb-3">
-                  <span className="font-bold text-amber-700 bg-amber-50 px-2.5 py-1 rounded">
-                    {notice.tag}
-                  </span>
-                  <span className="text-slate-400 flex items-center gap-1">
-                    <Calendar className="w-3.5 h-3.5" /> {notice.date}
-                  </span>
-                </div>
-                <h3 className="font-bold text-slate-900 leading-snug">{notice.title}</h3>
-              </div>
-            ))}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 bg-white rounded-2xl shadow-lg border border-slate-200 p-6 sm:p-8">
+          <div className="text-center border-r border-slate-100 last:border-none">
+            <p className="text-3xl sm:text-4xl font-extrabold text-indigo-700">96.4%</p>
+            <p className="text-xs sm:text-sm font-medium text-slate-500 mt-1">Placement Record</p>
+          </div>
+          <div className="text-center lg:border-r border-slate-100">
+            <p className="text-3xl sm:text-4xl font-extrabold text-indigo-700">42 LPA</p>
+            <p className="text-xs sm:text-sm font-medium text-slate-500 mt-1">Highest Package</p>
+          </div>
+          <div className="text-center border-r border-slate-100">
+            <p className="text-3xl sm:text-4xl font-extrabold text-indigo-700">120+</p>
+            <p className="text-xs sm:text-sm font-medium text-slate-500 mt-1">Research Labs</p>
+          </div>
+          <div className="text-center">
+            <p className="text-3xl sm:text-4xl font-extrabold text-indigo-700">8,500+</p>
+            <p className="text-xs sm:text-sm font-medium text-slate-500 mt-1">Active Students</p>
           </div>
         </div>
       </section>
@@ -408,7 +410,8 @@ export default function CollegeHomePage() {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
             {notices.map((notice, idx) => (
               <div key={idx} className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
                 <div className="flex items-center justify-between text-xs mb-3">
