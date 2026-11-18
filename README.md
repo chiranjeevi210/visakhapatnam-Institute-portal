@@ -1,4 +1,4 @@
-# Apex Institute of Technology & Management – Full-Stack College Web & ERP Portal
+# Visakhapatnam Institute for Pofessional studies – Full-Stack College Web & ERP Portal
 
 A modern, responsive university web application and role-based ERP dashboard built with **Next.js (App Router)**, **React**, **TypeScript**, and **Tailwind CSS**.
 
